@@ -57,6 +57,7 @@ app.listen(process.env.PORT || 3000, function () {
 });
 
 
+/*
 
 2. Declared Globally, outside the function
 var - global
