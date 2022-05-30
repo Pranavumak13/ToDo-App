@@ -46,16 +46,16 @@ app.get("/about",function (req, res) {
   res.render("about");
 })
 
+app.listen(process.env.PORT || 3000, function () {
+  console.log("Port has started!!");
+});
+
+
 // app.post("/Work", function (req, res) {
 //     let item = req.body.newItem;
 //     WorkItems.push(item); // pushing new items in an array
 //     res.redirect("/Work");
 // })
-
-app.listen(process.env.PORT || 3000, function () {
-  console.log("Port has started!!");
-});
-
 
 /*
 
