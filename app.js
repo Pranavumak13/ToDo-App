@@ -23,13 +23,12 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-  
+
   const item = req.body.newItem;
-  if(req.body.addItems === "Work")
-  {
+  if (req.body.addItems === "Work") {
     WorkItems.push(item);
     res.redirect("/Work");
-  }else{
+  } else {
 
     items.push(item); // pushing new items in an array
     res.redirect("/"); // it goes back to app.get()
@@ -39,15 +38,15 @@ app.post("/", function (req, res) {
 });
 
 app.get("/Work", function (req, res) {
-    res.render("list", { listTitle: "Work List", newListItems: WorkItems });
+  res.render("list", { listTitle: "Work List", newListItems: WorkItems });
 })
 
-app.get("/about",function (req, res) {
+app.get("/about", function (req, res) {
   res.render("about");
 })
 
 app.listen(process.env.PORT || 3000, function () {
-  console.log("Port has started!!");
+  console.log("Server has started on port 3000!!");
 });
 
 
